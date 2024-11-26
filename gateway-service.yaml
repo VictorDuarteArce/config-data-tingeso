@@ -21,3 +21,7 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/Usuarios/**
+        - id: simulator-service
+          uri: lb://simulator-service
+          predicates:
+            - Path=/SimuladorCredito/**
