@@ -20,11 +20,11 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/Usuarios/**
+            - Path=/api/usuario/**
         - id: simulator-service
           uri: lb://simulator-service
           predicates:
-            - Path=/SimuladorCredito/**
+            - Path=/api/simulator/**
       globalcors:
         cors-configurations:
           '[/**]':
