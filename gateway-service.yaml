@@ -23,8 +23,11 @@ spring:
             allowedMethods:
               - GET
               - POST
-            allowedHeaders: "*"
-            allowCredentials: true
+              - PUT
+              - DELETE
+              - OPTIONS 
+            allowedHeaders:
+              - "*"
       routes:
         - id: user-service
           uri: lb://user-service
