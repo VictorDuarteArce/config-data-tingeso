@@ -33,7 +33,3 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/usuario/**
-        - id: simulator-service
-          uri: lb://simulator-service
-          predicates:
-            - Path=/simulator/**
