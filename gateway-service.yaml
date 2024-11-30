@@ -21,23 +21,14 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/Usuarios/**
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods:
-                - GET
-                - POST
-              allowedHeaders: '*'
-              maxAge: 30
         - id: simulator-service
           uri: lb://simulator-service
           predicates:
             - Path=/SimuladorCredito/**
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods:
-                - GET
-                - POST
-              allowedHeaders: '*'
-              maxAge: 30
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "https://docs.spring.io"
+            allowedMethods:
+            - GET
+            - POST
