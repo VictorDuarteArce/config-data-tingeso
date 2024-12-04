@@ -33,8 +33,8 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/usuario/**
-        - id: credito-service
-          uri: lb://credito-service
+        - id: credit-service
+          uri: lb://credit-service
           predicates:
             - Path=/credito/**
         - id: evaluador-service
