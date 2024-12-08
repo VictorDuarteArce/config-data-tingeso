@@ -49,7 +49,7 @@ spring:
           uri: lb://simulator-service
           predicates:
             - Path=/simulate/**
-        - id: documento-service
+        - id: document-service
           uri: lb://document-service
           predicates:
             - Path=/documento/**
