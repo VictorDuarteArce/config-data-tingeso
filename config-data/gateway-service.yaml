@@ -33,6 +33,9 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/usuario/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - PreserveHostHeader
         - id: credit-service
           uri: lb://credit-service
           predicates:
